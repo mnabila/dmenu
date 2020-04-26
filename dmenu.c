@@ -146,7 +146,7 @@ drawmenu(void)
 	drw_setscheme(drw, scheme[SchemeNorm]);
 	if (passwd) {
 	        censort = ecalloc(1, sizeof(text));
-		memset(censort, '.', strlen(text));
+		memset(censort, '*', strlen(text));
 		drw_text(drw, x, 0, w, bh, lrpad / 2, censort, 0);
 		free(censort);
 	} else drw_text(drw, x, 0, w, bh, lrpad / 2, text, 0);
